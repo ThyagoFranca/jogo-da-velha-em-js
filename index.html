@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <title>Jogo da Velha</title>
+
+        <!-- Link CDN --> 
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"> 
+		</script>
+		<script src="jogo.js"></script>
+
+    </head>
+
+    <body>
+		
+		<div id="pagina-inicial" align="center">
+			<table border="0" width="600px;">
+				<tbody>
+					<tr>
+						<td colspan="3" align="center" style="padding-top: 200px; color: red;"><strong>JOGO DA VELHA</strong></td>
+					</tr>
+
+					<tr>
+						<td align="center">
+							<img src="imagens/jogador_1.png"><br>
+							<input id="apelido_jogador_1" type="text" maxlength="10" placeholder="Nome jogador 1" style="border: 1px solid #0000ff;"> <!--para digitar até 10 caracteres -->
+						</td>
+						
+						<td align="center">
+							<img id="btn_iniciar_jogo" src="imagens/iniciar.png">
+						</td>
+						
+						<td align="center">
+							<img src="imagens/jogador_2.png"><br>
+							<input id="apelido_jogador_2" type="text" maxlength="10" placeholder="Nome jogador 2" style="border: 1px solid #0000ff;"> <!--para digitar até 10 caracteres -->
+						</td>
+						
+					</tr>
+
+				</tbody>
+			</table>
+
+		</div>
+
+		<div id="palco-jogo" style="display: none; margin-top: 50px; text-align: center"> <!-- para deixar as imgs no centro -->
+
+			<div style="display: inline-block;"> <!-- para deixar a div na mesma linha -->
+				<img src="imagens/jogador_1.png"><br>
+				<span id="nome_jogador_1"></span>
+
+			</div>
+
+			<div style="display: inline-block;">
+				<table border="0">
+					<tr>
+						<td style="border-bottom: solid 1px blue; border-right: solid 1px blue;">
+							<div class="jogada" id="a-1" style="width: 100px; height: 100px;"></div>
+						</td>
+						<td style="border-bottom: solid 1px blue; border-right: solid 1px blue;">
+							<div class="jogada" id="a-2" style="width: 100px; height: 100px;"></div>
+						</td>
+						<td style="border-bottom: solid 1px blue;">
+							<div class="jogada" id="a-3" style="width: 100px; height: 100px;"></div>
+						</td>
+					</tr>
+
+					<tr>
+						<td style="border-bottom: solid 1px blue; border-right: solid 1px blue;">
+							<div class="jogada" id="b-1" style="width: 100px; height: 100px;"></div>
+						</td>
+						<td style="border-bottom: solid 1px blue; border-right: solid 1px blue;">
+							<div class="jogada" id="b-2" style="width: 100px; height: 100px;"></div>
+						</td>
+						<td style="border-bottom: solid 1px blue;">
+							<div class="jogada" id="b-3" style="width: 100px; height: 100px;"></div>
+						</td>
+					</tr>
+					
+					<tr>
+						<td style="border-right: solid 1px blue;">
+							<div class="jogada" id="c-1" style="width: 100px; height: 100px;"></div>
+						</td>
+						<td style="border-right: solid 1px blue;">
+							<div class="jogada" id="c-2" style="width: 100px; height: 100px;"></div>
+						</td>
+						<td>
+							<div class="jogada" id="c-3" style="width: 100px; height: 100px;"></div>
+						</td>
+					</tr>
+				</table>
+			</div>
+
+			<div style="display: inline-block;">
+				<img src="imagens/jogador_2.png"><br>
+				<span id="nome_jogador_2"></span>
+			</div>
+
+			<div>
+				<a href="index.html"><button class="btn btn-danger" style="margin-top: 50px;">Reiniciar Jogo</button></a>
+			</div>
+
+		</div>
+
+    </body>
+</html>
